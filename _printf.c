@@ -6,7 +6,7 @@
 
 int _printf(const char *format, ...)
 {
-	int idx, x;
+	int idx, x = 0;
 	va_list list;
 
 	va_start(list, format);
@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 				case 'd':
 				case 'i':
 					{
-						x =+ pr_int(va_arg(list, int));
+						x += pr_int(va_arg(list, int));
 						break;
 					}
 			}
