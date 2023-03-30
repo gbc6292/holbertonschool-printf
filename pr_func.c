@@ -1,7 +1,4 @@
 #include "main.h"
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
 int print_char(char a)
 {
 	_putchar(a);
