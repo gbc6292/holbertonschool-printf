@@ -55,7 +55,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			x += print_char(format[idx]);
-		}
+		} 
 		idx++;
 	}
 	va_end(list);
