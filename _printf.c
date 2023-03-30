@@ -1,9 +1,11 @@
 #include <stdarg.h>
-#include <stdio.h>
 #include "main.h"
-
-
-
+/**
+ * _printf - Function that print, strings, characters and integers.
+ * @format: Format of the argument to be printed.
+ * Return: 
+ *
+ */
 int _printf(const char *format, ...)
 {
 	int idx, x = 0;
@@ -13,10 +15,16 @@ int _printf(const char *format, ...)
 
 	idx = 0;
 
+	if (format[idx] == '\0')
+		return (0);
+	if (list == '\0')
+		return (0);
+
 	while (format[idx] != '\0')
 	{
 		if (format[idx] == '%')
 		{
+
 			switch (format[idx + 1])
 			{
 				case 'c':
@@ -53,4 +61,3 @@ int _printf(const char *format, ...)
 	va_end(list);
 	return (x);
 }
-
