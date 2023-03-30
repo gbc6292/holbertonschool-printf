@@ -1,7 +1,5 @@
 #include "main.h"
 
-
-
 int pr_int(int num)
 {
         int count = 0;
