@@ -19,12 +19,10 @@ int _printf(const char *format, ...)
 		return (0);
 	if (list == '\0')
 		return (0);
-
 	while (format[idx] != '\0')
 	{
 		if (format[idx] == '%')
 		{
-
 			switch (format[idx + 1])
 			{
 				case 'c':
