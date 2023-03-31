@@ -8,13 +8,10 @@
  */
 int _printf(const char *format, ...)
 {
-	int idx, x = 0;
+	int idx = 0, x = 0;
 	va_list list;
 
 	va_start(list, format);
-
-	idx = 0;
-
 	if (format[idx] == '\0')
 		return (0);
 	if (list == '\0')
