@@ -1,36 +1,19 @@
 #include "main.h"
 
-int pr_int(int num)
+int pr_int(int n)
 {
-	int count = 0;
-	int digits[10];
-	int j = 0;
-	
-	if (num < 0)
+	int len = 0;
+	if (n < 0)
 	{
 		_putchar('-');
-		count++;
-		num = -num;
+		n = -n;
+		len++;
 	}
-	if (num == 0)
+	if (n > 9)
 	{
-		_putchar('0');
-		count++;
+		len += pr_int(n / 10);
 	}
-	else
-	{
-		while (num > 0)
-		{
-			digits[j] = num % 10;
-			num /= 10;
-			j++;
-		}
-		while (j > 0)
-		{
-			j--;
-			_putchar(digits[j] + '0');
-			count++;
-		}
-	}
-	return (num);
-}  
+	_putchar(n % 10 + '0');
+	len++;
+	return len;
+}
