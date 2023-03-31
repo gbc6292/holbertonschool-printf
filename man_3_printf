@@ -1,0 +1,81 @@
+.TH _printf 3 "March 2023" "Version 1.0" "User Commands"
+
+.SH NAME
+_printf - print formatted output
+
+.SH SYNOPSIS
+.B #include <stdio.h>
+.br
+.B #include <stdarg.h>
+.br
+.B #include "main.h"
+.br
+.B int _printf(const char format, ...)
+
+.SH DESCRIPTION
+The _printf function prints a formatted output to the standard output stream. It takes a format string and a variable number of arguments, and uses the format string to control the output.
+
+The format string can contain conversion specifications, which start with the percent character (%) and are followed by one or more format specifiers. The supported format specifiers are:
+
+.TP
+.B %c
+Prints a single character.
+
+.TP
+.B %s
+Prints a string of characters.
+
+.TP
+.B %%
+Prints a literal percent sign.
+
+.TP
+.B %d, %i
+Prints a signed decimal integer.
+
+The format string can also contain literal characters, which are printed as-is.
+
+.SH RETURN VALUE
+The _printf function returns the number of characters printed, excluding the null byte that terminates the output.
+
+If an error occurs, a negative value is returned.
+
+.SH EXAMPLES
+The following example shows how to use the _printf function to print a formatted output:
+
+.B #include <stdio.h>
+.br
+.B #include "main.h"
+.br
+.B int main(void)
+.br
+.B {
+.br
+.B int i = 42;
+.br
+.B chars = "Hello, world!";
+.br
+.B _printf("i = %d\n", i);
+.br
+.B _printf("s = %s\n", s);
+.br
+.B _printf("percent = %%\n");
+.br
+.B return (0);
+.br
+.B }
+
+This program will output:
+
+.B i = 42
+.br
+.B s = Hello, world!
+.br
+.B percent = %
+
+.SH SEE ALSO
+.B printf(3), scanf(3), fprintf(3), sprintf(3), vprintf(3), vsprintf(3), vfprintf(3)
+
+.SH AUTHOR
+
+Jonathan Perez, Giovanni Barreto
