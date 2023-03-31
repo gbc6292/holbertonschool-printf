@@ -3,7 +3,7 @@
 /**
  * _printf - Function that print, strings, characters and integers.
  * @format: Format of the argument to be printed.
- * Return: 
+ * Return: A printed argument.
  *
  */
 int _printf(const char *format, ...)
@@ -53,7 +53,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			x += print_char(format[idx]);
-		} 
+		}
 		idx++;
 	}
 	va_end(list);
